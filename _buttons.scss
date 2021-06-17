@@ -1,0 +1,18 @@
+$purple: #310A90;
+
+.button_primary{
+    border: 2px solid $purple;
+    box-sizing: border-box;
+    border-radius: 4px;
+    background: $purple;
+    color: #FFFFFF;
+    height: 49px;
+}
+
+.button_secondary{
+    border: 2px solid $purple;
+    box-sizing: border-box;
+    border-radius: 4px;
+    height: 49px;
+    background: transparent;
+}

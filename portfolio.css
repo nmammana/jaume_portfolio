@@ -1,0 +1,325 @@
+.flex_center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.required:after {
+  content: " *";
+  font: normal 600 13px/20px 'Source Sans Pro', sans-serif;
+  color: #DA1414;
+  opacity: 0.8;
+}
+
+.headline1 {
+  font: normal bold 95px/154px "Poppins", sans-serif;
+  letter-spacing: -0.015em;
+  color: #310A90;
+}
+
+.headline2 {
+  font: normal bold 59px/95px "Poppins", sans-serif;
+  letter-spacing: -0.005em;
+  color: #310A90;
+}
+
+.headline3 {
+  font: normal bold 48px/78px "Poppins", sans-serif;
+  color: #310A90;
+}
+
+.headline4 {
+  font: normal bold 34px/55px "Poppins", sans-serif;
+  color: #310A90;
+}
+
+.headline5 {
+  font: normal bold 24px/39px "Poppins", sans-serif;
+  color: #310A90;
+}
+
+.body1 {
+  font: normal normal 16px/26px "Poppins", sans-serif;
+  letter-spacing: 0.005em;
+  color: #310A90;
+}
+
+.body2 {
+  font: normal normal 14px/23px "Poppins", sans-serif;
+  letter-spacing: 0.0025em;
+  color: #310A90;
+}
+
+.button_font {
+  font: normal bold 14px/23px "Poppins", sans-serif;
+  text-align: center;
+  letter-spacing: 1.25px;
+  text-transform: uppercase;
+  color: #310A90;
+}
+
+.caption_font {
+  font: normal normal 12px/19px "Poppins", sans-serif;
+  text-align: center;
+  letter-spacing: 0.4px;
+  color: #310A90;
+}
+
+.comments_font {
+  font: normal bold 16px/26px "Oxygen", sans-serif;
+  letter-spacing: 0.005em;
+  color: #310A90;
+}
+
+.button_primary {
+  border: 2px solid #310A90;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  background: #310A90;
+  color: #FFFFFF;
+  height: 49px;
+}
+
+.button_secondary {
+  border: 2px solid #310A90;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  height: 49px;
+  background: transparent;
+}
+
+.icons {
+  list-style: none;
+  padding: 0;
+  padding-bottom: 1.5em;
+  margin: 1em 0;
+  -webkit-box-pack: start;
+      -ms-flex-pack: start;
+          justify-content: flex-start;
+  gap: 1em;
+}
+
+.icons .icon {
+  background: #FFFFFF;
+  border: 2px solid #310A90;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 4px;
+  width: 44px;
+  height: 44px;
+}
+
+.title {
+  background: #310A90;
+  -webkit-box-shadow: -4px 4px 0px #FFFFFF;
+          box-shadow: -4px 4px 0px #FFFFFF;
+  color: #FFFFFF;
+  padding: 0.33em;
+}
+
+.client_comments {
+  margin: 2.5em 1em;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1.5em;
+  background: rgba(255, 255, 255, 0.2);
+  /*backdrop-filter: blur(39.7657px);*/
+  border-radius: 1.5em;
+  border: 4px solid;
+  /*NO SE VE EL BORDE - REVISAR*/
+  border-image-source: radial-gradient(83.14% 78.52% at -12.32% -18.69%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
+}
+
+.client_comments .comment {
+  margin: 1.5em 0;
+}
+
+.client_comments .client {
+  margin: 0;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  /*Background que da figma, no se ve igual al de la imagen*"
+    /*background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
+                linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);*/
+  background: radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(100deg, #72EDF2 0%, #5151E5 100%);
+  /*backdrop-filter: blur(40px);*/
+}
+
+header {
+  margin: 0 auto;
+  padding: 1em 0;
+  /*max-width: 20.5em;*/
+}
+
+header .nav_bar {
+  margin: 1em;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+header .nav_bar .logo {
+  font: normal 900 24px/39px 'Poppins', sans-serif;
+  color: #310A90;
+}
+
+header .nav_bar .curriculum {
+  min-width: 153px;
+}
+
+header .picture {
+  padding: 1em 0;
+}
+
+header .picture img {
+  width: 20.5em;
+}
+
+header .presentation {
+  margin: 0 1em;
+}
+
+header .presentation h2 {
+  margin: 0;
+}
+
+header .presentation h1 {
+  margin: 0;
+}
+
+header .presentation p {
+  margin: 1em 0;
+}
+
+header .descargar_cv {
+  width: 100%;
+}
+
+main .intro {
+  padding: 2.5em 1em;
+}
+
+main .intro .intro__message {
+  margin: 0;
+  text-align: center;
+  letter-spacing: 0.005em;
+  font-weight: normal;
+}
+
+main .intro .intro__projects {
+  margin: 1em 0;
+  text-align: center;
+}
+
+main .project {
+  padding: 2.5em 1em;
+  padding-bottom: 0;
+}
+
+main .project .project_presentation {
+  padding: 2.5em 0;
+}
+
+main .project .project_presentation .description {
+  margin: 1.5em 0;
+}
+
+main .project .project_presentation .project_buttons {
+  width: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  gap: 1em;
+}
+
+main .contact {
+  padding: 5em 1em;
+}
+
+main .contact .invitation {
+  margin: 1.5em 0;
+}
+
+main .contact form .form_label {
+  font-weight: bold;
+  padding: 0 1em;
+}
+
+main .contact form .input_field {
+  background: #FFFFFF;
+  border: 1px solid #858C94;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  border-radius: 8px;
+  width: 100%;
+  padding: 0.75em 1em;
+  margin-top: 0.5em;
+  margin-bottom: 1em;
+}
+
+main .contact form .message_input {
+  height: 134px;
+}
+
+main .contact form .button_enviar {
+  width: 100%;
+}
+
+footer .icons_footer {
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 0;
+  margin: 0;
+}
+
+footer .text_container {
+  margin: 1.5em;
+}
+
+footer .text_container .goodbye {
+  margin: 0;
+  text-align: center;
+  color: #FFFFFF;
+  gap: 0.25em;
+}
+
+footer .text_container .goodbye img {
+  width: 1.5em;
+}
+
+footer .text_container .copyright {
+  margin: 0;
+  margin-top: 0.5em;
+  text-align: center;
+  color: #FFFFFF;
+}
+/*# sourceMappingURL=portfolio.css.map */

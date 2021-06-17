@@ -1,0 +1,163 @@
+$purple: #310A90;
+$turquoise: #42E2B8;
+$white: #FFFFFF;
+
+$gradient:  radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
+            linear-gradient(100deg, #72EDF2 0%, #5151E5 100%);
+.flex_center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.required:after {
+    content:" *";
+    font: normal 600 13px/20px 'Source Sans Pro', sans-serif;;
+    color: #DA1414;
+    opacity: 0.8;
+  }
+
+@import "fonts";
+@import "buttons";
+@import "icons";
+@import "title";
+@import "comments";
+
+html{
+    font-size: 16px;
+}
+
+body{
+    /*Background que da figma, no se ve igual al de la imagen*"
+    /*background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
+                linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);*/ 
+    background: $gradient;
+    /*backdrop-filter: blur(40px);*/
+}
+
+header{
+    margin: 0 auto;
+    padding: 1em 0;
+    /*max-width: 20.5em;*/
+    .nav_bar{
+        margin: 1em;
+        justify-content: space-between;
+        
+        .logo{
+            font: normal 900 24px/39px 'Poppins', sans-serif;
+            color: $purple;
+        }
+        .curriculum{
+            min-width: 153px;
+        }
+    }
+    .picture{
+        padding: 1em 0;
+        img{
+            width: 20.5em;
+        }
+    }
+    .presentation{
+        margin: 0 1em;
+        h2{
+            margin: 0;
+        }
+        h1{
+            margin: 0;
+        }
+        p{
+            margin: 1em 0;
+        }
+    }
+    .descargar_cv{
+        width: 100%;
+    }
+    
+}
+
+main{
+    .intro{
+        padding: 2.5em 1em ;
+        .intro__message{
+            margin: 0;
+            text-align: center;
+            letter-spacing: 0.005em;
+            font-weight: normal;
+        }
+        .intro__projects{
+            margin: 1em 0;
+            text-align: center;
+        }
+    }
+    .project{
+        padding: 2.5em 1em;
+        padding-bottom: 0;
+        
+        .project_presentation{
+            padding: 2.5em 0;
+            .description{
+                margin: 1.5em 0;
+            }
+            .project_buttons{
+                width: 100%;
+                display: flex;
+                flex-direction: column;
+                gap: 1em;
+            }
+        }
+    }
+    .contact{
+        padding: 5em 1em;
+        .invitation{
+            margin: 1.5em 0;
+        }
+        form{
+            .form_label{
+                font-weight: bold;
+                padding: 0 1em;
+            }
+            .input_field{
+                background: #FFFFFF;
+                border: 1px solid #858C94;
+                box-sizing: border-box;
+                border-radius: 8px;
+                width: 100%;
+                padding: 0.75em 1em;
+                margin-top: 0.5em;
+                margin-bottom: 1em;
+            }
+            .message_input{
+                height: 134px;
+            }
+            .button_enviar{
+                width: 100%;
+            }
+        }
+    }
+}
+
+footer{
+    .icons_footer{
+        justify-content: center;
+        padding: 0;
+        margin: 0;
+    }
+    .text_container{
+        margin: 1.5em;
+        .goodbye{
+            margin: 0;
+            text-align: center;
+            color: #FFFFFF;
+            gap: 0.25em;
+            img{
+                width: 1.5em;
+            }
+        }
+        .copyright{
+            margin: 0;
+            margin-top: 0.5em;
+            text-align: center;
+            color: #FFFFFF;
+        }
+    }
+    
+}

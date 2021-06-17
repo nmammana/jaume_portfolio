@@ -1,0 +1,63 @@
+$heading1: normal bold 95px/154px 'Poppins', sans-serif;
+$heading2: normal bold 59px/95px 'Poppins', sans-serif;
+$heading3: normal bold 48px/78px 'Poppins', sans-serif;
+$heading4: normal bold 34px/55px 'Poppins', sans-serif;
+$heading5: normal bold 24px/39px 'Poppins', sans-serif;
+$body1: normal normal 16px/26px 'Poppins', sans-serif;
+$body2: normal normal 14px/23px 'Poppins', sans-serif;
+$button_font: normal bold 14px/23px 'Poppins', sans-serif;
+$caption_font: normal normal 12px/19px 'Poppins', sans-serif;
+$comments_font: normal bold 16px/26px 'Oxygen', sans-serif;
+
+$purple: #310A90;
+
+.headline1{
+    font: $heading1;
+    letter-spacing: -0.015em;
+    color: $purple;
+}
+.headline2{
+    font: $heading2;
+    letter-spacing: -0.005em;
+    color: $purple;
+}
+.headline3{
+    font: $heading3;
+    color: $purple;
+}
+.headline4{
+    font: $heading4;
+    color: $purple;
+}
+.headline5{
+    font: $heading5;
+    color: $purple;
+}
+.body1{
+    font: $body1;
+    letter-spacing: 0.005em;
+    color: $purple;
+}
+.body2{
+    font: $body2;
+    letter-spacing: 0.0025em;
+    color: $purple;
+}
+.button_font{
+    font: $button_font;
+    text-align: center;
+    letter-spacing: 1.25px;
+    text-transform: uppercase;
+    color: $purple;
+}
+.caption_font{
+    font: $caption_font;
+    text-align: center;
+    letter-spacing: 0.4px;
+    color: $purple;
+}
+.comments_font{
+    font: $comments_font;
+    letter-spacing: 0.005em;
+    color: $purple;
+}
