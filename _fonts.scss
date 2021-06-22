@@ -1,13 +1,18 @@
-$heading1: normal bold 95px/154px 'Poppins', sans-serif;
-$heading2: normal bold 59px/95px 'Poppins', sans-serif;
-$heading3: normal bold 48px/78px 'Poppins', sans-serif;
+$heading1: normal bold 95px/154px 'Poppins', sans-serif;/*No se usa*/
+$heading2: normal bold 59px/95px 'Poppins', sans-serif; /*No se usa. Sería para titulos grandes en desktop*/
+$heading3: normal bold 3rem/4.875rem 'Poppins', sans-serif;
 $heading4: normal bold 34px/55px 'Poppins', sans-serif;
-$heading5: normal bold 24px/39px 'Poppins', sans-serif;
-$body1: normal normal 16px/26px 'Poppins', sans-serif;
+$heading5: normal bold 1.5rem/2.4rem 'Poppins', sans-serif;
+$heading6: normal 300 1.42rem/2.3rem 'Oxygen', sans-serif;
+$body1: normal normal 1rem/1.6rem 'Poppins', sans-serif;
 $body2: normal normal 14px/23px 'Poppins', sans-serif;
-$button_font: normal bold 14px/23px 'Poppins', sans-serif;
+$button_font: normal bold 0.875rem/1.4375rem 'Poppins', sans-serif;
 $caption_font: normal normal 12px/19px 'Poppins', sans-serif;
 $comments_font: normal bold 16px/26px 'Oxygen', sans-serif;
+$logo_font: normal 900 1rem/1.625rem 'Poppins', sans-serif;
+
+
+
 
 $purple: #310A90;
 
@@ -33,6 +38,7 @@ $purple: #310A90;
     font: $heading5;
     color: $purple;
 }
+
 .body1{
     font: $body1;
     letter-spacing: 0.005em;
@@ -61,3 +67,13 @@ $purple: #310A90;
     letter-spacing: 0.005em;
     color: $purple;
 }
+.logo_font{
+    font: $logo_font;
+}
+
+/*@media(min-width:1300px){
+    .button_font{
+        font-size: 22px;
+        line-height: 31px;
+    }
+}*/

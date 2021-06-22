@@ -7,10 +7,20 @@
     gap: 1em;
     .icon{
         background: #FFFFFF;
-        border: 2px solid #310A90;
+        border: 0.125em solid #310A90;
         box-sizing: border-box;
         border-radius: 4px;
         width: 44px;
         height: 44px;
     }
 }  
+
+@media (min-width: 1300px){
+    .icons{
+        .icon{
+            width: 2em;
+            height: 2em;
+            
+        }
+    }
+}

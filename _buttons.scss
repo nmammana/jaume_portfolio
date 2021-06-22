@@ -6,13 +6,20 @@ $purple: #310A90;
     border-radius: 4px;
     background: $purple;
     color: #FFFFFF;
-    height: 49px;
+    min-height: 49px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .button_secondary{
+    
     border: 2px solid $purple;
     box-sizing: border-box;
     border-radius: 4px;
-    height: 49px;
+    min-height: 49px;
     background: transparent;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }

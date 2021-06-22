@@ -11,7 +11,7 @@ $gradient:  radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 25
 }
 .required:after {
     content:" *";
-    font: normal 600 13px/20px 'Source Sans Pro', sans-serif;;
+    font: normal 600 1rem/1.6rem 'Source Sans Pro', sans-serif;;
     color: #DA1414;
     opacity: 0.8;
   }
@@ -32,6 +32,7 @@ body{
                 linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);*/ 
     background: $gradient;
     /*backdrop-filter: blur(40px);*/
+    padding: 0 1em;
 }
 
 header{
@@ -39,15 +40,17 @@ header{
     padding: 1em 0;
     /*max-width: 20.5em;*/
     .nav_bar{
-        margin: 1em;
+        margin: 1em 0;
         justify-content: space-between;
         
         .logo{
-            font: normal 900 24px/39px 'Poppins', sans-serif;
             color: $purple;
         }
         .curriculum{
             min-width: 153px;
+        }
+        .top_nav{
+            display:none
         }
     }
     .picture{
@@ -57,7 +60,6 @@ header{
         }
     }
     .presentation{
-        margin: 0 1em;
         h2{
             margin: 0;
         }
@@ -70,13 +72,14 @@ header{
     }
     .descargar_cv{
         width: 100%;
+        max-width: 400px;
     }
     
 }
 
 main{
     .intro{
-        padding: 2.5em 1em ;
+        padding: 2.5em 0;
         .intro__message{
             margin: 0;
             text-align: center;
@@ -89,13 +92,13 @@ main{
         }
     }
     .project{
-        padding: 2.5em 1em;
+        padding: 2.5em 0;
         padding-bottom: 0;
-        
+              
         .project_presentation{
             padding: 2.5em 0;
             .description{
-                margin: 1.5em 0;
+                margin: 2em 0;
             }
             .project_buttons{
                 width: 100%;
@@ -105,10 +108,33 @@ main{
             }
         }
     }
+
+    .pokemon{
+        .project_pic{
+            img{
+                width: 20.5em;
+            }
+        }  
+    }
+    .marvol{
+        .project_pic{
+            img{
+                width: 20.5em;
+            }
+        }  
+    }
+    .netnet{
+        .project_pic{
+            img{
+                width: 18.875em;
+            }
+        }  
+    }
     .contact{
-        padding: 5em 1em;
+        padding: 5em 0;
         .invitation{
             margin: 1.5em 0;
+            color: #FFFFFF;
         }
         form{
             .form_label{
@@ -121,12 +147,13 @@ main{
                 box-sizing: border-box;
                 border-radius: 8px;
                 width: 100%;
+                max-height: 50px;
                 padding: 0.75em 1em;
                 margin-top: 0.5em;
                 margin-bottom: 1em;
             }
             .message_input{
-                height: 134px;
+                min-height: 134px;
             }
             .button_enviar{
                 width: 100%;
@@ -142,7 +169,7 @@ footer{
         margin: 0;
     }
     .text_container{
-        margin: 1.5em;
+        margin: 1.5em 0;
         .goodbye{
             margin: 0;
             text-align: center;
@@ -150,6 +177,9 @@ footer{
             gap: 0.25em;
             img{
                 width: 1.5em;
+            }
+            .to_hide{
+                display: none;
             }
         }
         .copyright{
@@ -159,5 +189,236 @@ footer{
             color: #FFFFFF;
         }
     }
+    .logo{
+        color: $white;
+        padding: 0 1em;
+        display: none;
+    }
+}
+
+@media (min-width:620px){
+    body{
+        max-width: 600px;
+        margin: 0 auto;
+    }
+    main{
+        .project{
+            .project_presentation{
+                .project_buttons{
+                    button{
+                        width: 60%;
+                        
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (min-width:820px){
+    html{
+        font-size: 18px;
+    }
+    body{
+        max-width: 800px;
+    }
+}
+
+@media (min-width:1000px){
+    body{
+        max-width: 900px;
+    }
+    main{
+        .project{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            align-items: center;
+            .project_pic{
+                img{
+                    width: 100%;
+                }
+            } 
+            .project_presentation{
+                .project_buttons{
+                    flex-direction: row-reverse;
+                    justify-content: flex-end;  /*Por ser reverse (not sure)*/
+                    gap: 1em;
+                    
+                    button{
+                        padding: 13px 24px;
+                    }
+                }
+            }
+        }
+        
+        .pokemon{
+            .project_pic{
+                grid-column: 6/13;
+                grid-row: 1;
+                
+            }
+            .project_presentation{
+                grid-column: 1/6;
+                grid-row: 1;
+            }
+        }
+        .marvol{
+            .project_pic{
+                grid-column: 1/8;
+                grid-row: 1;
+            }
+            .project_presentation{
+                grid-column: 8/13;
+                grid-row: 1;
+            }
+        }
+        .netnet{
+            .project_pic{
+                grid-column: 7/13;
+                grid-row: 1;
+                img{
+                    width: 12.6em;
+                }
+            }
+            .project_presentation{
+                grid-column: 2/7;
+                grid-row: 1;
+            }
+        }
+    }
     
+}
+
+@media (min-width: 1300px){
+    html{
+        font-size: 24px;
+    }
+    body{
+        max-width: 1200px;
+        margin: 0 auto;
+        padding: 0;
+    }
+    
+    header{
+        padding: 2em 0;
+        .nav_bar{
+            .curriculum{
+                display: none;
+            }
+            .top_nav{
+                list-style: none;
+                display: flex;
+                flex-direction: row;
+                gap: 2.85em;
+                li{
+                    a{
+                        text-decoration: none;
+                    }
+                }
+                .proyectos{
+                    color: #FFFFFF;
+                }
+                .hablemos{
+                    color: #FFFFFF;
+                }
+            }
+        }
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        grid-row-gap: 2.75em;
+        .nav_bar{
+            margin: 0;
+            grid-column: 1/7;
+            grid-row: 1;
+            max-height: 1.63em;
+        }
+        .picture{
+            grid-column: 8/13;
+            grid-row: 1/3;
+            img{
+                width: 100%;
+            }
+        }
+        .presentation{
+            grid-column: 1/7;
+            grid-row: 2;
+            .descargar_cv{
+                max-width: 18em;
+            }
+        }
+    }
+    main{
+        .intro{
+            max-width: 900px;
+            margin: 0 auto;
+            padding: 8.4em 0;
+            .intro__message{
+                font: $heading6;
+            }
+        }
+        
+        .contact{
+            max-width: 620px;
+            margin: 0 auto;
+            .title_contact{
+                display: inline-block;
+                width: 100%;      
+                text-align: center;         
+            }
+            .invitation{
+                text-align: center;
+                /*Tamaño del diseño, yo lo haria mas grande*/
+                font-size: 0.66em;
+            }
+        }
+
+    }
+    footer{
+        display: grid;
+        grid-template-columns: repeat(12,1fr);
+        align-items: center;
+        .icons{
+            grid-column: 10/13;
+            grid-row: 1;
+        }
+        .text_container{
+            grid-column: 4/10;
+            grid-row: 1;
+            .goodbye{
+                /*Tamaño del diseño, yo lo haria mas grande*/
+                font-size: 0.66em;
+                .to_hide{
+                    display: block;
+                }
+            }
+            .copyright{
+                font-size: 0.66em;
+                display: none;
+            }
+        }
+        .logo{
+            display: block;
+            grid-column: 1/4;
+            grid-row: 1;
+        }
+    }
+}
+
+@media (min-width: 1600px){
+    html{
+        font-size: 28px;
+    }
+    
+    footer{
+        .text_container{
+            .goodbye{
+                .to_hide{
+                    display: none;
+                }
+            }
+            .copyright{
+                display: block;
+            }
+        }
+    }
 }
