@@ -2,8 +2,9 @@ $purple: #310A90;
 $turquoise: #42E2B8;
 $white: #FFFFFF;
 
-$gradient:  radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
-            linear-gradient(100deg, #72EDF2 0%, #5151E5 100%);
+$gradient:  radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
+            linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+
 .flex_center{
     display: flex;
     align-items: center;
@@ -13,24 +14,24 @@ $gradient:  radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 25
     content:" *";
     font: normal 600 1rem/1.6rem 'Source Sans Pro', sans-serif;;
     color: #DA1414;
-    opacity: 0.8;
-  }
+    /*opacity: 0.8;*/
+}
 
 @import "fonts";
 @import "buttons";
 @import "icons";
 @import "title";
 @import "comments";
+@import "slidein";
 
 html{
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
-body{
-    /*Background que da figma, no se ve igual al de la imagen*"
-    /*background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
-                linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);*/ 
+body{ 
     background: $gradient;
+    background-attachment: fixed;
     /*backdrop-filter: blur(40px);*/
     padding: 0 1em;
 }
@@ -38,11 +39,16 @@ body{
 header{
     margin: 0 auto;
     padding: 1em 0;
-    /*max-width: 20.5em;*/
+    background: $gradient;
+    background-attachment: fixed;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    min-height: 2.8em;
+    padding: 1em;
     .nav_bar{
-        margin: 1em 0;
         justify-content: space-between;
-        
         .logo{
             color: $purple;
         }
@@ -53,31 +59,32 @@ header{
             display:none
         }
     }
-    .picture{
-        padding: 1em 0;
-        img{
-            width: 20.5em;
-        }
-    }
-    .presentation{
-        h2{
-            margin: 0;
-        }
-        h1{
-            margin: 0;
-        }
-        p{
-            margin: 1em 0;
-        }
-    }
-    .descargar_cv{
-        width: 100%;
-        max-width: 400px;
-    }
-    
 }
-
 main{
+    padding-top: 4.5em;
+    .presentation{
+        .presentation_picture{
+            padding: 1em 0;
+            img{
+                width: 20.5em;
+            }
+        }
+        .presentation_text{
+            h2{
+                margin: 0;
+            }
+            h1{
+                margin: 0;
+            }
+            p{
+                margin: 1em 0;
+            }
+            .descargar_cv{
+                width: 100%;
+                max-width: 400px;
+            }
+        }
+    }
     .intro{
         padding: 2.5em 0;
         .intro__message{
@@ -89,6 +96,14 @@ main{
         .intro__projects{
             margin: 1em 0;
             text-align: center;
+        }
+        .arrow_container{
+            height: 6.5em;
+            position: relative;
+            img{
+                position: absolute;
+
+            }
         }
     }
     .project{
@@ -108,7 +123,6 @@ main{
             }
         }
     }
-
     .pokemon{
         .project_pic{
             img{
@@ -196,10 +210,35 @@ footer{
     }
 }
 
+@media (max-width:360px){
+    main{
+        .presentation{
+            .presentation_picture{
+                img{
+                    width: 90%;
+                }
+            }
+        }
+        .project{
+            .project_pic{
+                img{
+                    width: 90%;
+                }
+            }
+        }
+    }
+}
+
 @media (min-width:620px){
     body{
         max-width: 600px;
         margin: 0 auto;
+    }
+    header{
+        .nav_bar{
+            max-width: 600px;
+            margin: 0 auto;
+        }
     }
     main{
         .project{
@@ -222,11 +261,23 @@ footer{
     body{
         max-width: 800px;
     }
+    header{
+        .nav_bar{
+            max-width: 800px;
+            margin: 0 auto;
+        }
+    }
 }
 
 @media (min-width:1000px){
     body{
         max-width: 900px;
+    }
+    header{
+        .nav_bar{
+            max-width: 900px;
+            margin: 0 auto;
+        }
     }
     main{
         .project{
@@ -250,7 +301,6 @@ footer{
                 }
             }
         }
-        
         .pokemon{
             .project_pic{
                 grid-column: 6/13;
@@ -298,10 +348,14 @@ footer{
         margin: 0 auto;
         padding: 0;
     }
-    
     header{
-        padding: 2em 0;
+        padding: 1.2em 0;
+        padding-bottom: 0.2em;
         .nav_bar{
+            max-width: 1200px;
+            max-height: 40px;
+            margin: 0 auto;
+                
             .curriculum{
                 display: none;
             }
@@ -322,41 +376,37 @@ footer{
                     color: #FFFFFF;
                 }
             }
-        }
-        display: grid;
-        grid-template-columns: repeat(12,1fr);
-        grid-row-gap: 2.75em;
-        .nav_bar{
-            margin: 0;
-            grid-column: 1/7;
-            grid-row: 1;
-            max-height: 1.63em;
-        }
-        .picture{
-            grid-column: 8/13;
-            grid-row: 1/3;
-            img{
-                width: 100%;
-            }
-        }
-        .presentation{
-            grid-column: 1/7;
-            grid-row: 2;
-            .descargar_cv{
-                max-width: 18em;
-            }
-        }
+        }        
     }
     main{
+        padding-top: 6.5em;
+        .presentation{
+            display: grid;
+            grid-template-columns: repeat(12,1fr);
+            grid-row-gap: 2.75em;
+            .presentation_picture{
+                grid-column: 8/13;
+                grid-row: 1/3;
+                img{
+                    width: 100%;
+                }
+            }
+            .presentation_text{
+                grid-column: 1/7;
+                grid-row: 2;
+                .descargar_cv{
+                    max-width: 18em;
+                }
+            }
+        }
         .intro{
             max-width: 900px;
             margin: 0 auto;
-            padding: 8.4em 0;
+            padding: 8.4em 0 3em;
             .intro__message{
                 font: $heading6;
             }
         }
-        
         .contact{
             max-width: 620px;
             margin: 0 auto;
@@ -367,11 +417,8 @@ footer{
             }
             .invitation{
                 text-align: center;
-                /*Tamaño del diseño, yo lo haria mas grande*/
-                font-size: 0.66em;
             }
         }
-
     }
     footer{
         display: grid;
@@ -408,7 +455,6 @@ footer{
     html{
         font-size: 28px;
     }
-    
     footer{
         .text_container{
             .goodbye{

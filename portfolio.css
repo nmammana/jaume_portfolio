@@ -15,7 +15,7 @@
   content: " *";
   font: normal 600 1rem/1.6rem 'Source Sans Pro', sans-serif;
   color: #DA1414;
-  opacity: 0.8;
+  /*opacity: 0.8;*/
 }
 
 /*No se usa*/
@@ -90,6 +90,13 @@
         line-height: 31px;
     }
 }*/
+@media (min-width: 1300px) {
+  .body1 {
+    font-size: 0.8rem;
+    line-height: 1.17rem;
+  }
+}
+
 .button_primary {
   border: 2px solid #310A90;
   -webkit-box-sizing: border-box;
@@ -185,6 +192,10 @@
   border: 4px solid;
   /*NO SE VE EL BORDE - REVISAR*/
   border-image-source: radial-gradient(83.14% 78.52% at -12.32% -18.69%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
+  border: 4px solid transparent;
+  border-image-source: radial-gradient(83.14% 78.52% at -12.32% -18.69%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
+  /*rgba(255, 255, 255, 0.75)
+    rgba(255, 255, 255, 0)*/
 }
 
 .client_comments .comment {
@@ -211,15 +222,45 @@
   }
 }
 
+.slidein {
+  -webkit-animation-duration: 2s;
+          animation-duration: 2s;
+  -webkit-animation-delay: 500ms;
+          animation-delay: 500ms;
+  -webkit-animation-name: slidein;
+          animation-name: slidein;
+  -webkit-animation-iteration-count: infinite;
+          animation-iteration-count: infinite;
+  -webkit-animation-direction: alternate;
+          animation-direction: alternate;
+}
+
+@-webkit-keyframes slidein {
+  from {
+    top: 0;
+  }
+  to {
+    top: 6em;
+  }
+}
+
+@keyframes slidein {
+  from {
+    top: 0;
+  }
+  to {
+    top: 6em;
+  }
+}
+
 html {
   font-size: 16px;
+  scroll-behavior: smooth;
 }
 
 body {
-  /*Background que da figma, no se ve igual al de la imagen*"
-    /*background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), 
-                linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);*/
-  background: radial-gradient(61.48% 22.48% at 5% 22.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(100deg, #72EDF2 0%, #5151E5 100%);
+  background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  background-attachment: fixed;
   /*backdrop-filter: blur(40px);*/
   padding: 0 1em;
 }
@@ -227,11 +268,17 @@ body {
 header {
   margin: 0 auto;
   padding: 1em 0;
-  /*max-width: 20.5em;*/
+  background: radial-gradient(41.48% 11.48% at 2.38% 8.52%, #8E74E9 0%, rgba(255, 255, 255, 0) 100%), linear-gradient(135deg, #72EDF2 0%, #5151E5 100%);
+  background-attachment: fixed;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  min-height: 2.8em;
+  padding: 1em;
 }
 
 header .nav_bar {
-  margin: 1em 0;
   -webkit-box-pack: justify;
       -ms-flex-pack: justify;
           justify-content: space-between;
@@ -249,27 +296,31 @@ header .nav_bar .top_nav {
   display: none;
 }
 
-header .picture {
+main {
+  padding-top: 4.5em;
+}
+
+main .presentation .presentation_picture {
   padding: 1em 0;
 }
 
-header .picture img {
+main .presentation .presentation_picture img {
   width: 20.5em;
 }
 
-header .presentation h2 {
+main .presentation .presentation_text h2 {
   margin: 0;
 }
 
-header .presentation h1 {
+main .presentation .presentation_text h1 {
   margin: 0;
 }
 
-header .presentation p {
+main .presentation .presentation_text p {
   margin: 1em 0;
 }
 
-header .descargar_cv {
+main .presentation .presentation_text .descargar_cv {
   width: 100%;
   max-width: 400px;
 }
@@ -288,6 +339,15 @@ main .intro .intro__message {
 main .intro .intro__projects {
   margin: 1em 0;
   text-align: center;
+}
+
+main .intro .arrow_container {
+  height: 6.5em;
+  position: relative;
+}
+
+main .intro .arrow_container img {
+  position: absolute;
 }
 
 main .project {
@@ -402,8 +462,21 @@ footer .logo {
   display: none;
 }
 
+@media (max-width: 360px) {
+  main .presentation .presentation_picture img {
+    width: 90%;
+  }
+  main .project .project_pic img {
+    width: 90%;
+  }
+}
+
 @media (min-width: 620px) {
   body {
+    max-width: 600px;
+    margin: 0 auto;
+  }
+  header .nav_bar {
     max-width: 600px;
     margin: 0 auto;
   }
@@ -419,11 +492,19 @@ footer .logo {
   body {
     max-width: 800px;
   }
+  header .nav_bar {
+    max-width: 800px;
+    margin: 0 auto;
+  }
 }
 
 @media (min-width: 1000px) {
   body {
     max-width: 900px;
+  }
+  header .nav_bar {
+    max-width: 900px;
+    margin: 0 auto;
   }
   main .project {
     display: -ms-grid;
@@ -508,12 +589,13 @@ footer .logo {
     padding: 0;
   }
   header {
-    padding: 2em 0;
-    display: -ms-grid;
-    display: grid;
-    -ms-grid-columns: (1fr)[12];
-        grid-template-columns: repeat(12, 1fr);
-    grid-row-gap: 2.75em;
+    padding: 1.2em 0;
+    padding-bottom: 0.2em;
+  }
+  header .nav_bar {
+    max-width: 1200px;
+    max-height: 40px;
+    margin: 0 auto;
   }
   header .nav_bar .curriculum {
     display: none;
@@ -538,16 +620,17 @@ footer .logo {
   header .nav_bar .top_nav .hablemos {
     color: #FFFFFF;
   }
-  header .nav_bar {
-    margin: 0;
-    -ms-grid-column: 1;
-    -ms-grid-column-span: 6;
-    grid-column: 1/7;
-    -ms-grid-row: 1;
-    grid-row: 1;
-    max-height: 1.63em;
+  main {
+    padding-top: 6.5em;
   }
-  header .picture {
+  main .presentation {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: (1fr)[12];
+        grid-template-columns: repeat(12, 1fr);
+    grid-row-gap: 2.75em;
+  }
+  main .presentation .presentation_picture {
     -ms-grid-column: 8;
     -ms-grid-column-span: 5;
     grid-column: 8/13;
@@ -555,23 +638,23 @@ footer .logo {
     -ms-grid-row-span: 2;
     grid-row: 1/3;
   }
-  header .picture img {
+  main .presentation .presentation_picture img {
     width: 100%;
   }
-  header .presentation {
+  main .presentation .presentation_text {
     -ms-grid-column: 1;
     -ms-grid-column-span: 6;
     grid-column: 1/7;
     -ms-grid-row: 2;
     grid-row: 2;
   }
-  header .presentation .descargar_cv {
+  main .presentation .presentation_text .descargar_cv {
     max-width: 18em;
   }
   main .intro {
     max-width: 900px;
     margin: 0 auto;
-    padding: 8.4em 0;
+    padding: 8.4em 0 3em;
   }
   main .intro .intro__message {
     font: normal 300 1.42rem/2.3rem "Oxygen", sans-serif;
@@ -587,8 +670,6 @@ footer .logo {
   }
   main .contact .invitation {
     text-align: center;
-    /*Tamaño del diseño, yo lo haria mas grande*/
-    font-size: 0.66em;
   }
   footer {
     display: -ms-grid;

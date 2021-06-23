@@ -21,20 +21,21 @@
     <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@0,200;0,300;0,400;0,600;0,700;0,900;1,200;1,300;1,400;1,600;1,700;1,900&display=swap" rel="stylesheet">
 </head>
 <body>
-    <header>
+    <header >
+        
         <nav class="nav_bar flex_center">
             <div class="logo logo_font">LOGO</div>
             <button class="button_primary button_font curriculum">currículum</button>
             <ul class="top_nav">
-                <li class="button_font"><a class="hola" href="">Hola</a></li>
-                <li class="button_font"><a class="proyectos" href="">PROYECTOS</a></li>
-                <li class="button_font"><a class="hablemos" href="">HABLEMOS</a></li>
+                <li class="button_font"><a class="hola" href="#presentation">Hola</a></li>
+                <li class="button_font"><a class="proyectos" href="#intro">PROYECTOS</a></li>
+                <li class="button_font"><a class="hablemos" href="#contact">HABLEMOS</a></li>
             </ul>
         </nav>
-        
-        <div class="picture flex_center"><img src="imagenes/user.png" alt=""></div>
+       
+        <!--div class="picture flex_center"><img src="imagenes/user.png" alt=""></div-->
 
-        <div class="presentation">
+        <!--div class="presentation">
             <h2 class=" headline5">¡Hola a todos!</h2>
             <h1 class="headline3">Soy Jaume</h1>
             <p class= "body1">Frontend Developer que le encanta implementar diseños que inspiran y atraen a las personas.</p>
@@ -45,16 +46,32 @@
                 <li class="icon flex_center"><img src="imagenes/icon-twitter.png" alt=""></li>
             </ul>
             <button class="button_primary button_font descargar_cv">Descargar currículum</button>
-        </div>
+        </div-->
     </header>
     <main>
-        <section class="intro">
+        <section class="presentation" id="presentation">
+            <div class="presentation_picture flex_center"><img src="imagenes/user.png" alt=""></div>
+            <div class="presentation_text">
+                <h2 class=" headline5">¡Hola a todos!</h2>
+                <h1 class="headline3">Soy Jaume</h1>
+                <p class= "body1">Frontend Developer que le encanta implementar diseños que inspiran y atraen a las personas.</p>
+                <ul class="icons flex_center">
+                    <li class="icon flex_center"><img src="imagenes/icon-phone.png" alt=""></li>
+                    <li class="icon flex_center"><img src="imagenes/icon-mail.png" alt=""></li>
+                    <li class="icon flex_center"><img src="imagenes/icon-instagram.png" alt=""></li>
+                    <li class="icon flex_center"><img src="imagenes/icon-twitter.png" alt=""></li>
+                </ul>
+                <button class="button_primary button_font descargar_cv">Descargar currículum</button>
+            </div>
+        </section>
+
+        <section class="intro" id="intro">
             <p class="intro__message headline5">A lo largo de mi carrera como Frontend, he tenido el privilegio de trabajar en proyectos retadores e increíbles</p>
             <p class="intro__projects headline5">Aquí hay algunos que me gustaría compartir.</p>
-            <div class="flex_center"><img src="imagenes/arrow-down.png" alt="arrow_down"></div>
+            <div class="arrow_container flex_center "><img class="slidein" src="imagenes/arrow-down.png" alt="arrow_down"></div>
         </section>
         
-        <section class="project pokemon">
+        <section class="project pokemon" id="project1">
             <div class="project_pic flex_center"><img src="imagenes/img.png" alt=""></div>
             <div class="project_presentation">
                 <span class="title headline5">leonidasesteban.com</span>
@@ -111,7 +128,7 @@
             <p class="client caption_font">MARCO CORTEZ / NETNET</p>
         </section>
 
-        <section class="contact">
+        <section class="contact" id="contact">
             <span class="title_contact title headline5">HABLEMOS</span>
             <p class="invitation body1">Si está interesado en trabajar conmigo en su próximo proyecto, no dude en ponerse en contacto conmigo.</p>
             <form action="">
