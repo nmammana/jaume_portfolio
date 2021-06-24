@@ -1,3 +1,7 @@
+$border-gradient: radial-gradient(83.14% 78.52% at -12.32% -18.69%, 
+                                rgba(255, 255, 255, 0.75) 0%, 
+                                rgba(255, 255, 255, 0) 100%);
+
 .client_comments{
     margin: 2.5em 0;
     display: flex;
@@ -8,17 +12,14 @@
     background: rgba(255, 255, 255, 0.2);
     /*backdrop-filter: blur(39.7657px);*/ 
     border-radius: 1.5em;
-    border: 4px solid ;
-    /*NO SE VE EL BORDE - REVISAR*/
-    border-image-source: radial-gradient(83.14% 78.52% at -12.32% -18.69%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
+   
     
     border: 4px solid transparent;
-    border-image-source: radial-gradient(83.14% 78.52% at -12.32% -18.69%, rgba(255, 255, 255, 0.75) 0%, rgba(255, 255, 255, 0) 100%);
     
-
-    /*rgba(255, 255, 255, 0.75)
-    rgba(255, 255, 255, 0)*/
-
+    /*NO SE VE EL BORDE - REVISAR*/
+    border-image-source: $border-gradient;
+    
+    
     .comment{
         margin: 1.5em 0;
     }
